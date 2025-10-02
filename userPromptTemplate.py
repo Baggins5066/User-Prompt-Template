@@ -13,6 +13,6 @@ def promptUser(prompt: str, *options: str):
             print("ERROR: Invalid input.")
 
 # promptUser() example
-print("\nWelcome to [Game Title]")
-promptUser("Choose your class.", "Warrior", "Mage", "Rogue")
-print()
+print("\npromptUser() Example")
+userClass = promptUser("Choose your class.", "Warrior", "Mage", "Rogue")
+print(f"\nYou have chosen the {userClass} class.")
