@@ -1,3 +1,12 @@
+import os
+import platform
+
+def clear():
+    if platform.system() == 'Windows':
+        os.system('cls')
+    else:
+        os.system('clear')
+
 def promptUser(prompt: str, *options: str):
     while True:
         print(f"\n{prompt}")
@@ -14,6 +23,7 @@ def promptUser(prompt: str, *options: str):
             print("\nERROR: Invalid input.")
 
 # promptUser() example
+clear()
 print("\npromptUser() Example")
 userClass = promptUser("Choose your class.", "Warrior", "Mage", "Rogue")
 print(f"\nYou have chosen the {userClass} class.\n")
