@@ -1,10 +1,12 @@
 import os
 import platform
 
-def clear():
-    if platform.system() == 'Windows':
+# clear() method
+if platform.system() == 'Windows':
+    def clear():
         os.system('cls')
-    else:
+elif platform.system() == 'Mac':
+    def clear():
         os.system('clear')
 
 def promptUser(prompt: str, *options: str):
@@ -24,6 +26,6 @@ def promptUser(prompt: str, *options: str):
 
 # promptUser() example
 clear()
-print("\npromptUser() Example")
+print("promptUser() Example")
 userClass = promptUser("Choose your class.", "Warrior", "Mage", "Rogue")
 print(f"\nYou have chosen the {userClass} class.\n")
