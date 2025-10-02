@@ -9,6 +9,10 @@ elif platform.system() == 'Mac':
     def clear():
         os.system('clear')
 
+def clearPrint(text: str):
+    clear()
+    print(text)
+
 def promptUser(prompt: str, *options: str):
     while True:
         print(f"\n{prompt}")
@@ -25,7 +29,6 @@ def promptUser(prompt: str, *options: str):
             print("\nERROR: Invalid input.")
 
 # promptUser() example
-clear()
-print("promptUser() Example")
+clearPrint("promptUser() Example")
 userClass = promptUser("Choose your class.", "Warrior", "Mage", "Rogue")
-print(f"\nYou have chosen the {userClass} class.\n")
+clearPrint(f"You have chosen the {userClass} class.\n")
